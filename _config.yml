@@ -10,6 +10,10 @@ baseurl: ''
 remote_theme: "gd-l/jekyll-uno"
 #remote_theme: matthiaslischka/jekyll-uno
 
+
+excerpt_separator: <!--more-->
+
+
 author:
   name: 'Greg de Lima'
   email: greg@gregdelima.com
