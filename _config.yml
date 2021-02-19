@@ -1,9 +1,9 @@
 # Site settings
 title: 'Greg de Lima'
 description: 'A&middot;N&middot;A&middot;L&middot;Y&middot;T&middot;I&middot;C&middot;S &nbsp; D&middot;E&middot;V&middot;E&middot;L&middot;O&middot;P&middot;E&middot;R'
-url: 'jekyll.gregdelima.com'
+url: 'blog.gregdelima.com'
 baseurl: ''
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'G-YTMFWGJFEJ'
 # disqus_shortname: 'your-disqus-name'
 
 
