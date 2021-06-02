@@ -9,3 +9,4 @@ services:
       - 4000:4000
     volumes:
       - .:/srv/jekyll
+    restart: unless-stopped
