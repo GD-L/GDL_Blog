@@ -1,55 +1,180 @@
-# Site settings
-title: 'Greg de Lima'
-description: 'A&middot;N&middot;A&middot;L&middot;Y&middot;T&middot;I&middot;C&middot;S &nbsp; D&middot;E&middot;V&middot;E&middot;L&middot;O&middot;P&middot;E&middot;R'
-url: 'blog.gregdelima.com'
+# The Site Configuration
+
+# Import the theme
+#remote_theme: "GD-L/jekyll-theme-chirpy"
+theme: 'jekyll-theme-chirpy'
+
+# Only if your site type is GitHub Project sites and doesn't have a custom domain,
+# change below value to '/projectname'.
 baseurl: ''
-google_analytics: 'G-YTMFWGJFEJ'
-# disqus_shortname: 'your-disqus-name'
+
+# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
+# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
+# otherwise, the layout language will use the default value of 'en'.
+lang: en
+
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: America/New_York
+
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ↓ --------------------------
+
+title: 'Greg de Lima'                        # the main title
+
+tagline: 'A&middot;N&middot;A&middot;L&middot;Y&middot;T&middot;I&middot;C&middot;S &nbsp; D&middot;E&middot;V&middot;E&middot;L&middot;O&middot;P&middot;E&middot;R' # it will display as the sub-title
+
+description: >-                        # used by seo meta and the atom feed
+  Greg de Lima, analytics developer
+
+# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
+url: 'https://blog.gregdelima.com'
+
+github:
+  username: gd-l             # change to your github username
+
+twitter:
+  username: gregdelima            # change to your twitter username
+
+social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  name: Greg de Lima
+  email: greg@gregdelima.com           # change to your email address
+  links:
+    # The first element serves as the copyright owner's link
+    - https://gregdelima.com
+    - https://twitter.com/gregdelima     # change to your twitter homepage
+    - https://github.com/gd-l      # change to your github homepage
+    # Uncomment below to add more social links
+    # - https://www.facebook.com/username
+    - https://www.linkedin.com/in/gregdelima
+
+#google_site_verification: google_meta_tag_verification # change to your verification string
+
+# ↑ --------------------------
 
 
-remote_theme: "gd-l/jekyll-uno"
-#remote_theme: matthiaslischka/jekyll-uno
+#google_analytics:
+#  id: 'G-YTMFWGJFEJ'              # fill in your Google Analytics ID
+  # Google Analytics pageviews report settings
+#  pv:
+#    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
+#    cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
+# Prefer color scheme setting.
+#
+# Note: Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+#
+# Available options:
+#
+#     light  - Use the light color scheme
+#     dark   - Use the dark color scheme
+#
+theme_mode: dark
 
-excerpt_separator: <!--more-->
+# The CDN endpoint for images.
+# Notice that once it is assigned, the CDN url
+# will be added to all image (site avatar & posts' images) paths starting with '/'
+#
+# e.g. 'https://cdn.com'
+img_cdn: ''
 
+# the avatar on sidebar, support local or CORS resources
+avatar: ./assets/images/profile.jpg
 
-author:
-  name: 'Greg de Lima'
-  email: greg@gregdelima.com
-  twitter_username: gregdelima 
-  #facebook_username: 
-  github_username: gd-l
-  linkedin_username:  gregdelima
+# boolean type, the global switch for ToC in posts.
+toc: true
+
+disqus:
+  comments: false  # boolean type, the global switch for posts comments.
+  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
+paginate: 10
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
 
 defaults:
   -
     scope:
-      path: ''
-      type: 'posts'
+      path: ''          # An empty string here means all files in the project
+      type: posts
     values:
-        layout: 'post'
-
-# Build settings
-destination: _site
-paginate: 10
-permalink: /:year/:title/
-markdown: kramdown
-highlighter: rouge
+      layout: post
+      comments: false    # Enable comments in posts.
+      toc: true         # Display TOC column in posts.
+      # DO NOT modify the following parameter unless you are confident enough
+      # to update the code of all other post links in this project.
+      permalink: /posts/:title/
+  -
+    scope:
+      path: _drafts
+    values:
+      comments: false
+  -
+    scope:
+      path: ''
+      type: tabs             # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
+      dynamic_title: true    # Hide title in mobile screens.
 
 sass:
-    sass_dir: _sass
-    style: compressed
+  style: compressed
 
-kramdown:
-  # use Github Flavored Markdown
-  input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - '*.gem'
+  - '*.gemspec'
+  - tools
+  - docs
+  - README.md
+  - LICENSE
+  - gulpfile.js
+  - node_modules
+  - '*.json'
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
 
 plugins:
   - jekyll-paginate
   - jekyll-remote-theme
   - jekyll-include-cache
-  
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', '.travis.yml', 'vendor']
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap 

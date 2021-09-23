@@ -23,6 +23,12 @@ gem "jekyll-paginate"
 gem 'jekyll-watch'
 gem 'kramdown'
 gem 'kramdown-parser-gfm'
+gem 'jekyll-redirect-from'
+gem 'jekyll-seo-tag'
+gem 'jekyll-archives'
+gem 'jekyll-sitemap'
+gem "jekyll-theme-chirpy"
+
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

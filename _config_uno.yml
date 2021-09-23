@@ -1,0 +1,81 @@
+# Site settings
+title: 'Greg de Lima'
+#description: 'A&middot;N&middot;A&middot;L&middot;Y&middot;T&middot;I&middot;C&middot;S &nbsp; D&middot;E&middot;V&middot;E&middot;L&middot;O&middot;P&middot;E&middot;R'
+tagline: 'A&middot;N&middot;A&middot;L&middot;Y&middot;T&middot;I&middot;C&middot;S &nbsp; D&middot;E&middot;V&middot;E&middot;L&middot;O&middot;P&middot;E&middot;R'
+
+url: 'blog.gregdelima.com'
+baseurl: ''
+google_analytics: 'G-YTMFWGJFEJ'
+# disqus_shortname: 'your-disqus-name'
+timezone: America/New_York
+
+
+#remote_theme: "gd-l/jekyll-uno"
+remote_theme: "GD-L/jekyll-theme-chirpy"
+#remote_theme: matthiaslischka/jekyll-uno
+#theme: "jekyll-theme-chirpy"
+
+author:
+  name: 'Greg de Lima'
+  email: greg@gregdelima.com
+  twitter_username: gregdelima 
+  #facebook_username: 
+  github_username: gd-l
+  linkedin_username:  gregdelima
+
+github:
+  username: gd-l
+
+twitter:
+  username: gregdelima
+
+
+social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  name: Greg de Lima
+  email: greg@gregdelima.com           # change to your email address
+  links:
+    # The first element serves as the copyright owner's link
+    - https://gregdelima.com
+    - https://twitter.com/gregdelima     # change to your twitter homepage
+    - https://github.com/gd-l      # change to your github homepage
+    # Uncomment below to add more social links
+    # - https://www.facebook.com/username
+    - https://www.linkedin.com/in/gregdelima
+
+theme_mode: dark
+
+excerpt_separator: <!--more-->
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins:
+  - jekyll-paginate
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-redirect-from
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', '.travis.yml', 'vendor']

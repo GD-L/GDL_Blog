@@ -3,6 +3,7 @@ layout: post
 title:  "My Home Assistant Setup"
 date:   2021-01-27
 tags: [Home Assistant, Docker]
+category: [Homelab]
 ---
 
 <div align="center">

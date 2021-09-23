@@ -3,6 +3,7 @@ layout: post
 title:  "Using Ombi with an External DB"
 date:   2021-02-16
 tags: [Docker, Ombi]
+category: [Homelab]
 ---
 
 The other day the SQLITE database in my [Ombi](https://ombi.io/) setup got locked out, which seems to be a somewhat common occurrence. And because I wasn't paying attention to where I had initially stored my database I wasn't able to do a proper [database migration](https://docs.ombi.app/guides/migrating-databases/)
