@@ -8,7 +8,7 @@ category: [Homelab]
 
 The other day the SQLITE database in my [Ombi](https://ombi.io/) setup got locked out, which seems to be a somewhat common occurrence. And because I wasn't paying attention to where I had initially stored my database I wasn't able to do a proper [database migration](https://docs.ombi.app/guides/migrating-databases/)
 <!--more-->
-According to the [docs](https://docs.ombi.app/info/alternate-databases/) it's pretty straight forward. I copied the `database.json` config below from [Alternate Databse Options](https://docs.ombi.app/info/alternate-databases/) and pointed the internal config to the file I created.
+According to the [docs](https://docs.ombi.app/info/alternate-databases/) it's pretty straight forward. I copied the `database.json` config below from [Alternate Database Options](https://docs.ombi.app/info/alternate-databases/) and pointed the internal config to the file I created.
 
 ```json
 {
